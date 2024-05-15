@@ -20,7 +20,7 @@ export async function POST(request: NextRequest){
     
     const user = await prisma.user.findUnique({ where: { email: body.email }})
 
-    if (!user || !(await bcrypt.compare(body.currentPassword, user.hashedPassword))) {
+    if (!user || user.hashedPassword === null || !(await bcrypt.compare(body.currentPassword, user.hashedPassword))) {
         return NextResponse.json(
             { error: 'Current password is incorrect' }, 
             { status: 400 }

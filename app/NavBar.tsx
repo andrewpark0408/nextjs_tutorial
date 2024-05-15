@@ -11,7 +11,6 @@ const NavBar = () => {
       <div className="flex space-x-3">
         <Link href="/" className="mr-5">Home</Link>
         <Link href="/users" className="mr-5">Users</Link>
-        <Link href="/products" className="mr-5">Products</Link>
         <Link href="/upload" className="mr-5">Upload</Link>
       </div>
       <div className="flex space-x-3">
