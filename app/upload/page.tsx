@@ -13,7 +13,7 @@ const UploadPage = () => {
     {publicId && 
     <CldImage src={publicId} width={270} height={180} alt="pictures"/>}
         <CldUploadWidget 
-            uploadPreset="fydrwagt"
+            uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
             options={{
                 sources: [
                     "local",
